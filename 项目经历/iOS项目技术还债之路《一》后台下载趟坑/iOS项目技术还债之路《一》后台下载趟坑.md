@@ -489,14 +489,14 @@ ldr        r1, [r0]     ; @selector(setNumberOfLoops:),"setNumberOfLoops:"
 
 简单对比下`NSURLSession`和后台保活两种机制：
 
-指标         | NSURLSession           | 后台保活    |
---------------------|------------------|-----------------------|
-耗电量 | 少，系统会做优化   | 多，但实测下来增加有限  |
-速度 | 慢   | 快   |
-大文件批量下载 |  可以全部下完    | 可以全部下完   |
-分片批量下载      | 实现成本高，官方不推荐，不一定能全部下完  | 实现成本低，可以全部下完  |
-遇到崩溃           | 可以继续下载    | 下载过程停止  |
-权限         | 无须申请额外权限     | 需要申请`Background Audio`权限  |
+| 指标           | NSURLSession                             | 后台保活                       |
+| -------------- | ---------------------------------------- | ------------------------------ |
+| 耗电量         | 少，系统会做优化                         | 多，但实测下来增加有限         |
+| 速度           | 慢                                       | 快                             |
+| 大文件批量下载 | 可以全部下完                             | 可以全部下完                   |
+| 分片批量下载   | 实现成本高，官方不推荐，不一定能全部下完 | 实现成本低，可以全部下完       |
+| 遇到崩溃       | 可以继续下载                             | 下载过程停止                   |
+| 权限           | 无须申请额外权限                         | 需要申请`Background Audio`权限 |
 
 
 综上，可以根据自己公司的业务诉求，可以采用不同的策略实现iOS后台下载，或者尝试下两者的结合，应对崩溃的情况。（之前测了下两种机制都开启好像会有问题，有兴趣的可以调研下）
@@ -505,7 +505,7 @@ ldr        r1, [r0]     ; @selector(setNumberOfLoops:),"setNumberOfLoops:"
 
 完。
 
-###参考链接：
+### 参考链接：
 * [Downloading Files in the Background](https://developer.apple.com/documentation/foundation/url_loading_system/downloading_files_in_the_background)
 * [Background Execution](https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)
 * [Preparing Your App to Run in the Background](https://developer.apple.com/documentation/uikit/core_app/managing_your_app_s_life_cycle/preparing_your_app_to_run_in_the_background)
