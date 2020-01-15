@@ -9,3 +9,4 @@
 
 # 逆向
 
+* [关于CleanMyMac 3 试用版使用限制的研究（非完美方案）](https://github.com/njuxjy/blogs/blob/master/%E9%80%86%E5%90%91/cleanmymac.md)
